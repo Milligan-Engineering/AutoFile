@@ -4,3 +4,6 @@ Malkam
 yes
 yes
 no
+EENG221
+MATH304
+NONE

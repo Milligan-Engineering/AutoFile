@@ -13,6 +13,7 @@ int main()
 	string tag1;
 	string tag2;
 	string tag3;
+	int tagsCounter = 0;
 
 
 	cout << "Please input your first tag: ";
@@ -40,13 +41,14 @@ int main()
 		{
 			cout << tagOutput; //Here is the text output with the information read from the file.
 			cout << ", ";
+			tagsCounter++;
 		}
 		tagsFile.close();
 	}
 
 	else cout << "Program has encountered an error";
 
-
+	cout << "\nYou have " << tagsCounter << " tags stored currently";
 
 	//keep the window open until the user closes
 	string closeString;
