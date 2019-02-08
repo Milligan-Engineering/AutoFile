@@ -54,7 +54,7 @@ int main()
 	{
 		while (getline(tagsFile, tagOutput)) //Read the text file, storing the information in the file as string tagOutput
 		{
-			sortingArray[arrayCounter] == tagOutput; //Here is the text output with the information read from the file.
+			sortingArray[arrayCounter] = tagOutput; //Here is the text output with the information read from the file.
 			tagsCounter++; //This is a basic counter to tell how many tags are stored
 			arrayCounter++;
 			
