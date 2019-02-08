@@ -1,9 +1,9 @@
-Tim
-John
-Malkam
-yes
-yes
-no
+EENG
+MATH
+NOPE
 EENG221
-MATH304
-NONE
+MATH
+PSYC
+EENG
+MATH
+304
