@@ -5,6 +5,15 @@
 //Description: Eventually, this program will take an input "tag" and find files corresponding to said tag, and then automatically file those for the user.
 //Last Changed: February 8, 2019
 
+/*PM04 Checklist
++ If Statement
++ Multi If or While
++ Indentation - see comment for line 75
++ Header
++ Comments - A litle too much detail. Some of the actions are obvious
++ Named Constant
++ Arrary
+*/
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -27,6 +36,9 @@ int main()
 	const int MAX_TAGS = 10;
 	string sortingArray[MAX_TAGS];
 	const int MAX_TAGS_CALC = 3;
+
+
+	// Store initial Tags in array for now rather in file
 
 	fstream tagsFile;
 	tagsFile.open("AutoFileTags.txt", fstream::app);
@@ -61,8 +73,10 @@ int main()
 		}
 		tagsFile.close();
 	}
-
-	else cout << "Program has encountered an error";
+	else
+	{ // Brackets not needed but help with understanding flow
+		cout << "Program has encountered an error";
+	}
 
 	cout << "\nYou have " << tagsCounter << " tags stored currently";
 
