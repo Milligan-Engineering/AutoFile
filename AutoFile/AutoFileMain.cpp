@@ -3,12 +3,18 @@
 //Email Addresss: tnthacker@my.milligan.edu
 //Assignment Number: Term Project
 //Description: Eventually, this program will take an input "tag" and find files corresponding to said tag, and then automatically file those for the user.
-//Last Changed: February 11, 2019
+//Last Changed: February 16, 2019
 
 
-//For now, I will be removing all code in regards to the file and solely work with arrays for better data control and manipulation
-//Thus, this is essentially a rebuild from the ground up. No files.
 
+/* Current I have removed all code regarding use of fstream - the file i/o and such. Now, tags will be stored directly 
+into an array and the data will be manipulated directly from that array instead of reading and writing from a text file.
+Thus, I have completely rewritted the program from the ground up, using switch to create a menu and sortingArray to store the tags.
+
+
+
+
+*/
 
 #include <iostream>
 #include <string>
@@ -22,7 +28,9 @@ int main()
 
 	int choice;
 	const int MAX_TAGS = 11;
+	const int MIN_TAGS = 1;
 	string sortingArray[MAX_TAGS];
+	int tagInputNumber;
 
 	do
 	{
@@ -38,13 +46,11 @@ int main()
 		case 1:
 
 
-			for (int arrayCounter1 = 1; arrayCounter1 <= MAX_TAGS; arrayCounter1++) 
+			for (int arrayCounter1 = 1; arrayCounter1 <= tagInputNumber; arrayCounter1++) 
 			{
-				
 				cout << "Tag " << arrayCounter1 << " is ";
 				cout << sortingArray[(arrayCounter1-1)];
 				cout << "\n";
-				
 			}
 				
 			break;
@@ -53,34 +59,42 @@ int main()
 
 		case 2:
 
-			for (int arrayCounter2 = 1; arrayCounter2 <= MAX_TAGS; arrayCounter2++)
+
+			cout << "How many tags would you like to input? ";
+			cin >> tagInputNumber;
+			while (tagInputNumber > 10 || tagInputNumber < 1)
+			{
+				cout << "Number of tags must be between " << MIN_TAGS << " and " << MAX_TAGS - 1 << ".\n";
+				cout << "Please enter a new number: ";
+				cin >> tagInputNumber;
+			}
+
+
+
+			for (int arrayCounter2 = 1; arrayCounter2 <= tagInputNumber; arrayCounter2++)
 			{
 				cout << "Enter Tag " << arrayCounter2 << " here: ";
 				string tempTag;
 				cin >> tempTag;
 				sortingArray[(arrayCounter2 - 1)] = tempTag;
-
 			}
 
 			break;
+
+
+
+		case 3:
+
+			break;
+			
+
+
 		}
 
+		
 	} while (choice != 3);
 
-
-
-
-
-
-
-
-
-
-
-	//keep the window open until the user closes
-	string closeString;
-	cout << "\nEnter anything to close";
-	cin >> closeString;
+	
 
 
 
