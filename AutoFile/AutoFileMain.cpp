@@ -31,7 +31,10 @@ int main()
 	const int MIN_TAGS = 1;
 	string sortingArray[MAX_TAGS];
 	int tagInputNumber;
+	// Run-time error on option 1
 
+	// Need to set tagInputNumber. Looks like you need to finish implementing what we talked about.
+	// Set tagInputNumber to 3 and assign tag names to the first two values of sortingArray. (may wnat to rename)
 	do
 	{
 		cout << "Welcome to AutoFile! \n"
