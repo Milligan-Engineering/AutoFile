@@ -14,20 +14,11 @@
 
 using namespace std;
 
-string tempTag;
 
+string invalidEval(string a);
+//Precondition: User inputs a string - tempTag
+//Postcondition: Function outputs a boolean value determinining whether or not an invalid character is in the input string
 
-bool invalidEval(bool a)
-{
-	a = true;
-	string invalidInputs[] = { "/" , "\\", "*", ":", "?", "<", ">", "|", "\"" };
-	if (tempTag == invalidInputs[0] || tempTag == invalidInputs[1] || tempTag == invalidInputs[2] ||
-		tempTag == invalidInputs[3] || tempTag == invalidInputs[4] || tempTag == invalidInputs[5] ||
-		tempTag == invalidInputs[6] || tempTag == invalidInputs[7] || tempTag == invalidInputs[8])
-	{
-		a = false;
-	}
-}
 
 
 
@@ -86,21 +77,17 @@ int main()
 				for (int arrayCounter2 = 1; arrayCounter2 <= tagInputNumber; arrayCounter2++)
 				{
 					cout << "Enter Tag " << arrayCounter2 << " here: ";
+					string tempTag;
 					cin >> tempTag;
 
+					string b = invalidEval(tempTag);
 
-						
-					
-					
-
-					bool case2Check = x;
-
-
-					while (a == false)
+					while (b == "false")
 					{
 						cout << "The characters / \ * : ? < > | \" are not valid inputs" << endl;
 						cout << "Please input a new tag: ";
 						cin >> tempTag;
+						b = "true";
 					}
 					sortingArray[(arrayCounter2 - 1)] = tempTag;
 				}
@@ -132,3 +119,15 @@ int main()
 
 }
 
+string invalidEval(string a)
+{
+	string invalidInputs[] = { "/" , "\\", "*", ":", "?", "<", ">", "|", "\"" };
+	if (a == invalidInputs[0] || a == invalidInputs[1] || a == invalidInputs[2] ||
+		a == invalidInputs[3] || a == invalidInputs[4] || a == invalidInputs[5] ||
+		a == invalidInputs[6] || a == invalidInputs[7] || a == invalidInputs[8])
+	{
+		a = "false";
+	}
+
+	return (a);
+}
