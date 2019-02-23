@@ -3,24 +3,35 @@
 //Email Addresss: tnthacker@my.milligan.edu
 //Assignment Number: Term Project
 //Description: Eventually, this program will take an input "tag" and find files corresponding to said tag, and then automatically file those for the user.
-//Last Changed: February 16, 2019
-
-
-
-/* Current I have removed all code regarding use of fstream - the file i/o and such. Now, tags will be stored directly 
-into an array and the data will be manipulated directly from that array instead of reading and writing from a text file.
-Thus, I have completely rewritted the program from the ground up, using switch to create a menu and sortingArray to store the tags.
+//Last Changed: February 22, 2019
 
 
 
 
-*/
 
 #include <iostream>
 #include <string>
 
-
 using namespace std;
+
+string tempTag;
+
+
+bool invalidEval(bool a)
+{
+	a = true;
+	string invalidInputs[] = { "/" , "\\", "*", ":", "?", "<", ">", "|", "\"" };
+	if (tempTag == invalidInputs[0] || tempTag == invalidInputs[1] || tempTag == invalidInputs[2] ||
+		tempTag == invalidInputs[3] || tempTag == invalidInputs[4] || tempTag == invalidInputs[5] ||
+		tempTag == invalidInputs[6] || tempTag == invalidInputs[7] || tempTag == invalidInputs[8])
+	{
+		a = false;
+	}
+}
+
+
+
+
 
 
 int main()
@@ -30,7 +41,10 @@ int main()
 	const int MAX_TAGS = 11;
 	const int MIN_TAGS = 1;
 	string sortingArray[MAX_TAGS];
-	int tagInputNumber;
+	int nextTag = 3;
+	sortingArray[0] = "TIM";
+	sortingArray[1] = "EENG221";
+	int tagInputNumber = 2;
 
 	do
 	{
@@ -43,58 +57,72 @@ int main()
 
 		switch (choice)
 		{
-		case 1:
-
-
-			for (int arrayCounter1 = 1; arrayCounter1 <= tagInputNumber; arrayCounter1++) 
+			case 1:
 			{
-				cout << "Tag " << arrayCounter1 << " is ";
-				cout << sortingArray[(arrayCounter1-1)];
-				cout << "\n";
-			}
-				
+
+				for (int arrayCounter1 = 1; arrayCounter1 <= tagInputNumber; arrayCounter1++)
+				{
+					cout << "Tag " << arrayCounter1 << " is ";
+					cout << sortingArray[(arrayCounter1 - 1)];
+					cout << "\n";
+				}
+
 			break;
+			}
 			
-			
 
-		case 2:
-
-
-			cout << "How many tags would you like to input? ";
-			cin >> tagInputNumber;
-			while (tagInputNumber > 10 || tagInputNumber < 1)
+			case 2:
 			{
-				cout << "Number of tags must be between " << MIN_TAGS << " and " << MAX_TAGS - 1 << ".\n";
-				cout << "Please enter a new number: ";
+
+				cout << "How many tags would you like to input? ";
 				cin >> tagInputNumber;
+				while (tagInputNumber > MAX_TAGS - 1 || tagInputNumber < MIN_TAGS)
+				{
+					cout << "Number of tags must be between " << MIN_TAGS << " and " << MAX_TAGS - 1 << ".\n";
+					cout << "Please enter a new number: ";
+					cin >> tagInputNumber;
+				}
+
+				for (int arrayCounter2 = 1; arrayCounter2 <= tagInputNumber; arrayCounter2++)
+				{
+					cout << "Enter Tag " << arrayCounter2 << " here: ";
+					cin >> tempTag;
+
+
+						
+					
+					
+
+					bool case2Check = x;
+
+
+					while (a == false)
+					{
+						cout << "The characters / \ * : ? < > | \" are not valid inputs" << endl;
+						cout << "Please input a new tag: ";
+						cin >> tempTag;
+					}
+					sortingArray[(arrayCounter2 - 1)] = tempTag;
+				}
+				
+
+
+
+				break;
 			}
 
 
-
-			for (int arrayCounter2 = 1; arrayCounter2 <= tagInputNumber; arrayCounter2++)
+			case 3:
 			{
-				cout << "Enter Tag " << arrayCounter2 << " here: ";
-				string tempTag;
-				cin >> tempTag;
-				sortingArray[(arrayCounter2 - 1)] = tempTag;
+				break;
 			}
 
-			break;
-
-
-
-		case 3:
-
-			break;
-			
-
-
-		}
+		} 
 
 		
 	} while (choice != 3);
 
-	
+
 
 
 
@@ -103,3 +131,4 @@ int main()
 
 
 }
+
