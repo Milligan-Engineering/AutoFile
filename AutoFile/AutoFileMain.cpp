@@ -87,7 +87,7 @@ int main()
 						cout << "The characters / \ * : ? < > | \" are not valid inputs" << endl;
 						cout << "Please input a new tag: ";
 						cin >> tempTag;
-						b = true;
+						b = invalidEval(tempTag);
 					}
 					sortingArray[(arrayCounter2 - 1)] = tempTag;
 				}
@@ -123,9 +123,9 @@ bool invalidEval(string a)
 {
 	bool b = true;
 	string invalidInputs[] = { "/" , "\\", "*", ":", "?", "<", ">", "|", "\"" };
-	if (a == invalidInputs[0] || a == invalidInputs[1] || a == invalidInputs[2] ||
-		a == invalidInputs[3] || a == invalidInputs[4] || a == invalidInputs[5] ||
-		a == invalidInputs[6] || a == invalidInputs[7] || a == invalidInputs[8])
+	if (a.find(invalidInputs[0]) !=string::npos || a.find(invalidInputs[1]) != string::npos || a.find(invalidInputs[2]) != string::npos || 
+		a.find(invalidInputs[3]) != string::npos || a.find(invalidInputs[4]) != string::npos || a.find(invalidInputs[5]) != string::npos ||
+		a.find(invalidInputs[6]) != string::npos || a.find(invalidInputs[7]) != string::npos || a.find(invalidInputs[8]) != string::npos)
 	{
 		b = false;
 	}
