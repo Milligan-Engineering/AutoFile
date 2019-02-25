@@ -15,7 +15,7 @@
 using namespace std;
 
 
-string invalidEval(string a);
+bool invalidEval(string a);
 //Precondition: User inputs a string - tempTag
 //Postcondition: Function outputs a boolean value determinining whether or not an invalid character is in the input string
 
@@ -80,14 +80,14 @@ int main()
 					string tempTag;
 					cin >> tempTag;
 
-					string b = invalidEval(tempTag);
+					bool b = invalidEval(tempTag);
 
-					while (b == "false")
+					while (b == false)
 					{
 						cout << "The characters / \ * : ? < > | \" are not valid inputs" << endl;
 						cout << "Please input a new tag: ";
 						cin >> tempTag;
-						b = "true";
+						b = true;
 					}
 					sortingArray[(arrayCounter2 - 1)] = tempTag;
 				}
@@ -119,15 +119,16 @@ int main()
 
 }
 
-string invalidEval(string a)
+bool invalidEval(string a)
 {
+	bool b = true;
 	string invalidInputs[] = { "/" , "\\", "*", ":", "?", "<", ">", "|", "\"" };
 	if (a == invalidInputs[0] || a == invalidInputs[1] || a == invalidInputs[2] ||
 		a == invalidInputs[3] || a == invalidInputs[4] || a == invalidInputs[5] ||
 		a == invalidInputs[6] || a == invalidInputs[7] || a == invalidInputs[8])
 	{
-		a = "false";
+		b = false;
 	}
 
-	return (a);
+	return (b);
 }
