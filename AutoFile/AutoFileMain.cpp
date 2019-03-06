@@ -3,7 +3,7 @@
 //Email Addresss: tnthacker@my.milligan.edu
 //Assignment Number: Term Project
 //Description: Eventually, this program will take an input "tag" and find files corresponding to said tag, and then automatically file those for the user.
-//Last Changed: February 22, 2019
+//Last Changed: March 6, 2019
 
 
 
@@ -18,6 +18,11 @@ using namespace std;
 bool invalidEval(string a);
 //Precondition: User inputs a string - tempTag
 //Postcondition: Function outputs a boolean value determinining whether or not an invalid character is in the input string
+
+
+void listPrint(string sortingArray1[], int arrayCounter1);
+//Precondition: Points to the array which contains tags, and inputs the number of elements within the array
+//Postcondition: Uses a for loop to print out no more and no less than the tags stored in the array
 
 
 
@@ -35,7 +40,9 @@ int main()
 	int nextTag = 3;
 	sortingArray[0] = "TIM";
 	sortingArray[1] = "EENG221";
+	int arrayCounter1 = 1;
 	int tagInputNumber = 2;
+	int tagTotalNumber = 0;
 
 	do
 	{
@@ -45,19 +52,19 @@ int main()
 			<< "Enter 3 to close the program. \n \n"
 			<< "Submit your choice and press Return: ";
 		cin >> choice;
+		while (choice > 3)
+		{
+			cout << "You must enter either 1, 2, or 3." << endl;
+			cin >> choice;
+		}
 
 		switch (choice)
 		{
 			case 1:
 			{
-
-				for (int arrayCounter1 = 1; arrayCounter1 <= tagInputNumber; arrayCounter1++)
-				{
-					cout << "Tag " << arrayCounter1 << " is ";
-					cout << sortingArray[(arrayCounter1 - 1)];
-					cout << "\n";
-				}
-
+				int tagTotalNumber = sortingArray->size() +1;
+				listPrint (sortingArray, tagTotalNumber);
+				
 			break;
 			}
 			
@@ -131,4 +138,15 @@ bool invalidEval(string a)
 	}
 
 	return (b);
+}
+
+
+
+void listPrint(string sortingArray1[], int tagTotalNumber)
+{
+	for (int arrayCounter1 = 0; arrayCounter1 <= tagTotalNumber; arrayCounter1++)
+	{
+		cout << sortingArray1[arrayCounter1];
+		cout << "\n";
+	}
 }
