@@ -83,7 +83,7 @@
     <ClCompile Include="AutoFileMain.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="AutoFileTags.txt" />
+    <Text Include="tagsText.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

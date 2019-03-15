@@ -15,11 +15,11 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="AutoFileTags.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="AutoFileMain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="tagsText.txt" />
   </ItemGroup>
 </Project>

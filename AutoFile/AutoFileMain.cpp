@@ -3,7 +3,7 @@
 //Email Addresss: tnthacker@my.milligan.edu
 //Assignment Number: Term Project
 //Description: Eventually, this program will take an input "tag" and find files corresponding to said tag, and then automatically file those for the user.
-//Last Changed: March 6, 2019
+//Last Changed: March 13, 2019
 
 
 
@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include <string>
+#include <fstream>
 
 using namespace std;
 
@@ -19,10 +20,17 @@ bool invalidEval(string a);
 //Precondition: User inputs a string - tempTag
 //Postcondition: Function outputs a boolean value determinining whether or not an invalid character is in the input string
 
-
 void listPrint(string sortingArray1[], int arrayCounter1);
 //Precondition: Points to the array which contains tags, and inputs the number of elements within the array
 //Postcondition: Uses a for loop to print out no more and no less than the tags stored in the array
+
+void fileInput(string inputTag);
+//Precondition: A string, inputTag, will be put into this function which will then write it to a text file.
+//Postcondition: There will be a text file populated with the input strings.
+
+int findTagNumber();
+//Precondition: When this is called, it will read the text file "tagsText.txt".
+//Postcondition: This function will output an integer value equivalent to the number of tags stored in the text file.
 
 
 
@@ -32,14 +40,12 @@ void listPrint(string sortingArray1[], int arrayCounter1);
 
 int main()
 {
-
 	int choice;
 	const int MAX_TAGS = 11;
 	const int MIN_TAGS = 1;
 	string sortingArray[MAX_TAGS];
+	sortingArray[0] = "There are no tags stored";
 	int nextTag = 3;
-	sortingArray[0] = "TIM";
-	sortingArray[1] = "EENG221";
 	int arrayCounter1 = 1;
 	int tagInputNumber = 2;
 	int tagTotalNumber = 0;
@@ -62,7 +68,7 @@ int main()
 		{
 			case 1:
 			{
-				int tagTotalNumber = sortingArray->size() +1;
+				int tagTotalNumber = findTagNumber(); //read file counter
 				listPrint (sortingArray, tagTotalNumber);
 				
 			break;
@@ -97,6 +103,7 @@ int main()
 						b = invalidEval(tempTag);
 					}
 					sortingArray[(arrayCounter2 - 1)] = tempTag;
+					fileInput(tempTag);
 				}
 				
 
@@ -149,4 +156,30 @@ void listPrint(string sortingArray1[], int tagTotalNumber)
 		cout << sortingArray1[arrayCounter1];
 		cout << "\n";
 	}
+}
+
+void fileInput(string inputTag)
+{
+	ofstream tagsFile;
+	tagsFile.open("tagsText.txt", ios::app); //Append to the text file
+	tagsFile << inputTag;
+	tagsFile << endl;
+	tagsFile.close();
+}
+
+int findTagNumber()
+{
+	int a = 1;
+	string line;
+	ifstream tagsFile;
+	tagsFile.open("tagsText.txt");
+	if (tagsFile.is_open())
+	{
+		while (getline(tagsFile, line));
+		{
+			a++;
+		}
+	}
+	
+	return (a);
 }
