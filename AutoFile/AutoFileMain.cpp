@@ -92,6 +92,8 @@ int main()
 				choice = -1;
 			}
 
+
+			//This was a different mnethod I was testing for input validation, but the try/catch method works as is.
 			/*while (tempChoice != test1 | tempChoice != test2 | tempChoice != test3)
 			{
 				cout << "You must enter either 1, 2, or 3." << endl;
@@ -213,9 +215,23 @@ void case2(string sortingArray[], const int MAX_TAGS, const int MIN_TAGS, int ta
 	cout << "How many tags would you like to input? ";
 	string tempTagInputNumber;
 	getline(cin, tempTagInputNumber);
-	tagInputNumber = stoi(tempTagInputNumber);
 
-	while (tagInputNumber != 1 | tagInputNumber != 2 | tagInputNumber != 3 | tagInputNumber != 4 | tagInputNumber != 5 |
+	try
+	{
+		tagInputNumber = stoi(tempTagInputNumber);
+		if (tagInputNumber != 1 && tagInputNumber != 2 && tagInputNumber != 3 && tagInputNumber != 4 && tagInputNumber != 5
+			&& tagInputNumber != 6 && tagInputNumber != 7 && tagInputNumber != 8 && tagInputNumber != 9 && tagInputNumber != 10)
+		{
+			cout << "Please enter an integer from " << MIN_TAGS << " to " << MAX_TAGS - 1 << ".\n" << endl;
+			tagInputNumber = -1;
+		}
+	}
+	catch (exception e)
+	{
+		tagInputNumber = -1;
+	}
+
+	/*if (tagInputNumber != 1 | tagInputNumber != 2 | tagInputNumber != 3 | tagInputNumber != 4 | tagInputNumber != 5 |
 		tagInputNumber != 6 | tagInputNumber != 7 | tagInputNumber != 8 | tagInputNumber != 9 | tagInputNumber != 10)
 	{
 		cout << "Number of tags must be an integer from " << MIN_TAGS << " to " << MAX_TAGS - 1 << ".\n";
@@ -223,6 +239,7 @@ void case2(string sortingArray[], const int MAX_TAGS, const int MIN_TAGS, int ta
 		getline(cin, tempTagInputNumber);
 		tagInputNumber = stoi(tempTagInputNumber);
 	}
+	*/
 
 	while (tagInputNumber > MAX_TAGS - 1 || tagInputNumber < MIN_TAGS)
 	{
