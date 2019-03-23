@@ -18,6 +18,7 @@ I intend to, near the end of the semester, change this so that the array size is
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <limits>
 
 using namespace std;
 
@@ -77,6 +78,16 @@ int main()
 				<< "Submit your choice and press Return: ";
 
 			getline(cin, tempChoice);
+		
+			
+
+			/*if (cin.fail())
+			{
+				cin.clear();
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
+				cout << "You must enter 1, 2, or 3" << endl << endl;
+			}
+			*/
 			try
 			{
 				choice = stoi(tempChoice);
@@ -91,7 +102,7 @@ int main()
 				cout << "Please enter 1, 2, or 3" << endl << endl;
 				choice = -1;
 			}
-
+			
 
 			//This was a different mnethod I was testing for input validation, but the try/catch method works as is.
 			/*while (tempChoice != test1 | tempChoice != test2 | tempChoice != test3)
