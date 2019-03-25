@@ -41,15 +41,8 @@ int findTagNumber(string arrayUpdate[]);
 
 void case2(string sortingArray[], const int MAX_TAGS, const int MIN_TAGS, int tagInputNumber);
 //Note: I reduced all of "case 2" - the case in which you enter new tags - into a void function.
-//Precondition: You must have an array to store tags in, a const int value to represent the maximum
-	//number of tags you would like to input, a const int value for the minimum number of tags
-	//and the user must input a value for "tag input number" that is greater than MIN_TAGS and
-	//less than or equal to MAX_TAGS. The user must then input tags corresponding to the 
-	//tagInputNumber. These tags may not have any characters not allowed in a file name by 
-	//the Windows OS.
-//Postcondition: Each of the stored tags will be written, line by line, to a text file tagsText.txt
-	//for storage and manipulation. The array will be populated with the tags from this text
-	//file upon running the program again.
+//Precondition:
+//Postcondition:
 
 
 
@@ -62,7 +55,7 @@ int main()
 	string tempChoice;
 	const int MAX_TAGS = 11;
 	const int MIN_TAGS = 1;
-	string sortingArray[100];
+	string sortingArray[MAX_TAGS];
 	sortingArray[0] = "There are no tags stored";
 	int nextTag = 3;
 	int arrayCounter1 = 1;
