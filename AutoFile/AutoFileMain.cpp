@@ -74,7 +74,8 @@ int main()
 			cout << "Welcome to AutoFile! \n"
 				<< "Enter 1 to view current tags. \n"
 				<< "Enter 2 to enter new tags. \n"
-				<< "Enter 3 to close the program. \n \n"
+				<< "Enter 3 to remove tags. \n"
+				<< "Enter 4 to close the program. \n \n"
 				<< "Submit your choice and press Return: ";
 
 			getline(cin, tempChoice);
@@ -91,15 +92,15 @@ int main()
 			try
 			{
 				choice = stoi(tempChoice);
-				if (choice != 1 && choice != 2 && choice != 3)
+				if (choice != 1 && choice != 2 && choice != 3 && choice != 4)
 				{
-					cout << "Please enter 1, 2, or 3" << endl << endl;
+					cout << "Please enter 1, 2, 3, or 4." << endl << endl;
 					choice = -1;
 				}
 			}
 			catch(exception e)
 			{
-				cout << "Please enter 1, 2, or 3" << endl << endl;
+				cout << "Please enter 1, 2, 3, or 4." << endl << endl;
 				choice = -1;
 			}
 			
@@ -131,7 +132,7 @@ int main()
 				int tagTotalNumber = findTagNumber(sortingArray); //read file counter
 				listPrint (sortingArray, tagTotalNumber);
 				
-			break;
+				break;
 			}
 			
 
@@ -145,13 +146,19 @@ int main()
 
 			case 3:
 			{
+				cout << "This function has not yet been implemented.";
+				break;
+			}
+
+			case 4:
+			{
 				break;
 			}
 
 		} 
 
-		choice = -1;
-	} while (choice != 3);
+		
+	} while (choice != 4);
 
 
 
@@ -230,8 +237,7 @@ void case2(string sortingArray[], const int MAX_TAGS, const int MIN_TAGS, int ta
 	try
 	{
 		tagInputNumber = stoi(tempTagInputNumber);
-		if (tagInputNumber != 1 && tagInputNumber != 2 && tagInputNumber != 3 && tagInputNumber != 4 && tagInputNumber != 5
-			&& tagInputNumber != 6 && tagInputNumber != 7 && tagInputNumber != 8 && tagInputNumber != 9 && tagInputNumber != 10)
+		if (tagInputNumber < 1 || tagInputNumber >10)
 		{
 			cout << "Please enter an integer from " << MIN_TAGS << " to " << MAX_TAGS - 1 << ".\n" << endl;
 			tagInputNumber = -1;
