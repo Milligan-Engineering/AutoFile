@@ -290,6 +290,15 @@ void case2(string sortingArray[], const int MAX_TAGS, const int MIN_TAGS, int ta
 			getline(cin, tempTag);
 			b = invalidEval(tempTag);
 		}
+
+		while (tempTag.empty())
+		{
+			cout << "Tags may not be blank." << endl;
+			cout << "Please input a new tag: ";
+			getline(cin, tempTag);
+
+		}
+
 		sortingArray[(arrayCounter2 - 1)] = tempTag;
 		fileOutput(tempTag);
 	}
