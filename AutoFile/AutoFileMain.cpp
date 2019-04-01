@@ -3,24 +3,20 @@
 //Email Addresss: tnthacker@my.milligan.edu
 //Assignment Number: Term Project
 //Description: Eventually, this program will take an input "tag" and find files corresponding to said tag, and then automatically file those for the user.
-//Last Changed: March 21, 2019
+//Last Changed: April 1, 2019
 
 /*
 Preface to Autofile:
 It its current state, Autofile is limited to MAX_TAGS number of tags - Indexing the sorting array to 0-10. 
-
+I have changed the array size to be 100, rather than MAX_TAGS until we implement dynamic arrays.
 I intend to, near the end of the semester, change this so that the array size is determined by the number of lines in the text file
 	or something of the sort. Considering this, understand that MAX_TAGS is simply a stub.
 */
 
 
 
-#include <iostream>
-#include <string>
-#include <fstream>
-#include <limits>
+#include "stdafx.h"
 
-using namespace std;
 
 
 bool invalidEval(string a);
