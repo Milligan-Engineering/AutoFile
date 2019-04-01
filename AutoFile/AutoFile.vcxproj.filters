@@ -18,8 +18,19 @@
     <ClCompile Include="AutoFileMain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="dateClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="tagsText.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dateClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

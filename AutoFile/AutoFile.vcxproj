@@ -82,9 +82,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AutoFileMain.cpp" />
+    <ClCompile Include="dateClass.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="tagsText.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dateClass.h" />
+    <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

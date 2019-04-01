@@ -15,12 +15,10 @@ I intend to, near the end of the semester, change this so that the array size is
 
 
 
-#include <iostream>
-#include <string>
-#include <fstream>
-#include <limits>
+#include "stdafx.h"
+#include "dateClass.cpp"
+#include "dateClass.h"
 
-using namespace std;
 
 
 bool invalidEval(string a);
@@ -55,8 +53,6 @@ void case2(string sortingArray[], const int MAX_TAGS, const int MIN_TAGS, int ta
 
 
 
-
-
 int main()
 {
 	string tempChoice;
@@ -68,6 +64,11 @@ int main()
 	int arrayCounter1 = 1;
 	int tagInputNumber = 2;
 	int tagTotalNumber = 0;
+
+	//-------------------------
+	dateClass theDates;
+	theDates.inputDates;
+	//-------------------------
 
 	string test1 = "1";
 	string test2 = "2";
