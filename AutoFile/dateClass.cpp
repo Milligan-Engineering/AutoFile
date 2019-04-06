@@ -1,4 +1,3 @@
-#include "dateClass.h"
 #include "stdafx.h"
 
 
