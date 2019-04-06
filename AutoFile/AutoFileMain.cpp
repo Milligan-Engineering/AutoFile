@@ -29,17 +29,7 @@ void fileOutput(string inputTag);
 //Postcondition: There will be a text file populated with the input strings.
 
 
-void case2(string sortingArray[], const int MAX_TAGS, const int MIN_TAGS, int tagInputNumber);
-//Note: I reduced all of "case 2" - the case in which you enter new tags - into a void function.
-//Precondition: You must have an array to store tags in, a const int value to represent the maximum
-	//number of tags you would like to input, a const int value for the minimum number of tags
-	//and the user must input a value for "tag input number" that is greater than MIN_TAGS and
-	//less than or equal to MAX_TAGS. The user must then input tags corresponding to the 
-	//tagInputNumber. These tags may not have any characters not allowed in a file name by 
-	//the Windows OS.
-//Postcondition: Each of the stored tags will be written, line by line, to a text file tagsText.txt
-	//for storage and manipulation. The array will be populated with the tags from this text
-	//file upon running the program again.
+
 
 
 
@@ -213,69 +203,3 @@ void fileOutput(string inputTag)
 
 
 
-void case2(string sortingArray[], const int MAX_TAGS, const int MIN_TAGS, int tagInputNumber)
-{
-	cout << "How many tags would you like to input? ";
-	string tempTagInputNumber;
-	getline(cin, tempTagInputNumber);
-
-	try
-	{
-		tagInputNumber = stoi(tempTagInputNumber);
-		if (tagInputNumber < MIN_TAGS || tagInputNumber > MAX_TAGS - 1)
-		{
-			cout << "Please enter an integer from " << MIN_TAGS << " to " << MAX_TAGS - 1 << ".\n" << endl;
-			tagInputNumber = -1;
-		}
-	}
-	catch (exception e)
-	{
-		tagInputNumber = -1;
-	}
-
-	/*if (tagInputNumber != 1 | tagInputNumber != 2 | tagInputNumber != 3 | tagInputNumber != 4 | tagInputNumber != 5 |
-		tagInputNumber != 6 | tagInputNumber != 7 | tagInputNumber != 8 | tagInputNumber != 9 | tagInputNumber != 10)
-	{
-		cout << "Number of tags must be an integer from " << MIN_TAGS << " to " << MAX_TAGS - 1 << ".\n";
-		cout << "Please enter a new number: ";
-		getline(cin, tempTagInputNumber);
-		tagInputNumber = stoi(tempTagInputNumber);
-	}
-	*/
-
-	while (tagInputNumber > MAX_TAGS - 1 || tagInputNumber < MIN_TAGS)
-	{
-		cout << "Number of tags must be between " << MIN_TAGS << " and " << MAX_TAGS - 1 << ".\n";
-		cout << "Please enter a new number: ";
-		getline(cin, tempTagInputNumber);
-		tagInputNumber = stoi(tempTagInputNumber);
-	}
-
-	for (int arrayCounter2 = 1; arrayCounter2 <= tagInputNumber; arrayCounter2++)
-	{
-		cout << "Enter Tag " << arrayCounter2 << " here: ";
-		string tempTag;
-		getline(cin, tempTag);
-
-		bool b = invalidEval(tempTag);
-
-		while (b == false)
-		{
-			cout << "The characters / \ * : ? < > | \"  and spaces are not valid inputs" << endl;
-			cout << "Please input a new tag: ";
-			getline(cin, tempTag);
-			b = invalidEval(tempTag);
-		}
-
-		while (tempTag.empty())
-		{
-			cout << "Tags may not be blank." << endl;
-			cout << "Please input a new tag: ";
-			getline(cin, tempTag);
-
-		}
-
-		sortingArray[(arrayCounter2 - 1)] = tempTag;
-		fileOutput(tempTag);
-	}
-}
