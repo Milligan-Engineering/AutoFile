@@ -55,6 +55,9 @@ void case2(string sortingArray[], const int MAX_TAGS, const int MIN_TAGS, int ta
 
 int main()
 {
+	TagsClass TagsClass;
+
+
 	string tempChoice;
 	const int MAX_TAGS = 11;
 	const int MIN_TAGS = 1;
@@ -78,7 +81,8 @@ int main()
 				<< "Enter 1 to view current tags. \n"
 				<< "Enter 2 to enter new tags. \n"
 				<< "Enter 3 to remove tags. \n"
-				<< "Enter 4 to close the program. \n \n"
+				<< "Enter 4 to AutoFile. \n"
+				<< "Enter 5 to close the program. \n \n"
 				<< "Submit your choice and press Return: ";
 
 			getline(cin, tempChoice);
@@ -95,15 +99,15 @@ int main()
 			try
 			{
 				choice = stoi(tempChoice);
-				if (choice != 1 && choice != 2 && choice != 3 && choice != 4)
+				if (choice != 1 && choice != 2 && choice != 3 && choice != 4 && choice != 5)
 				{
-					cout << "Please enter 1, 2, 3, or 4." << endl << endl;
+					cout << "Please enter 1, 2, 3, 4, or 5." << endl << endl;
 					choice = -1;
 				}
 			}
 			catch(exception e)
 			{
-				cout << "Please enter 1, 2, 3, or 4." << endl << endl;
+				cout << "Please enter 1, 2, 3, 4, or 5." << endl << endl;
 				choice = -1;
 			}
 			
@@ -149,7 +153,7 @@ int main()
 
 			case 3:
 			{
-				cout << "This function has not yet been implemented.";
+				cout << "This function has not yet been implemented. It will use the FileClass.";
 				cout << "\n" << endl;
 				choice = -1;
 				break;
@@ -157,13 +161,21 @@ int main()
 
 			case 4:
 			{
+				cout << "This function has not yet been implemented. It will use the DirectoryClass.";
+				cout << "\n" << endl;
+				choice = -1;
+				break;
+			}
+
+			case 5:
+			{
 				break;
 			}
 
 		} 
 
 		
-	} while (choice != 4);
+	} while (choice != 5);
 
 
 
