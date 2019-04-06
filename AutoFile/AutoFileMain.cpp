@@ -23,17 +23,11 @@ bool invalidEval(string a);
 //Precondition: User inputs a string - tempTag
 //Postcondition: Function outputs a boolean value determinining whether or not an invalid character is in the input string
 
-void listPrint(string sortingArray1[], int arrayCounter1);
-//Precondition: Points to the array which contains tags, and inputs the number of elements within the array
-//Postcondition: Uses a for loop to print out no more and no less than the tags stored in the array
 
 void fileOutput(string inputTag);
 //Precondition: A string, inputTag, will be put into this function which will then write it to a text file.
 //Postcondition: There will be a text file populated with the input strings.
 
-int findTagNumber(string arrayUpdate[]);
-//Precondition: When this is called, it will read the text file "tagsText.txt".
-//Postcondition: This function will output an integer value equivalent to the number of tags stored in the text file.
 
 void case2(string sortingArray[], const int MAX_TAGS, const int MIN_TAGS, int tagInputNumber);
 //Note: I reduced all of "case 2" - the case in which you enter new tags - into a void function.
@@ -206,14 +200,6 @@ bool invalidEval(string a)
 
 
 
-void listPrint(string sortingArray1[], int tagTotalNumber)
-{
-	for (int arrayCounter1 = 0; arrayCounter1 <= tagTotalNumber; arrayCounter1++)
-	{
-		cout << sortingArray1[arrayCounter1];
-		cout << "\n";
-	}
-}
 
 void fileOutput(string inputTag) 
 {
@@ -224,25 +210,7 @@ void fileOutput(string inputTag)
 	tagsFile.close();
 }
 
-int findTagNumber(string arrayUpdate[])
-{
-	int a = 1;
-	int b = 0;
-	string line;
-	ifstream tagsFile;
-	tagsFile.open("tagsText.txt");
-	if (tagsFile.is_open())
-	{
-		while (getline(tagsFile, line))
-		{
-			arrayUpdate[b] = line;
-			a++;
-			b++;
-		}
-	}
-	
-	return (a);
-}
+
 
 
 void case2(string sortingArray[], const int MAX_TAGS, const int MIN_TAGS, int tagInputNumber)
