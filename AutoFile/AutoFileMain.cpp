@@ -16,45 +16,29 @@ I intend to, near the end of the semester, change this so that the array size is
 
 
 #include "stdafx.h"
+#include "TagsClass.h"
+#include "DirectoryClass.h"
+#include "FilesClass.h"
 
+string tempChoice;
+string sortingArray[100];
+int arrayCounter1 = 1;
+int tagInputNumber = 2;
+int tagTotalNumber = 0;
 
-
-bool invalidEval(string a);
-//Precondition: User inputs a string - tempTag
-//Postcondition: Function outputs a boolean value determinining whether or not an invalid character is in the input string
-
-
-void fileOutput(string inputTag);
-//Precondition: A string, inputTag, will be put into this function which will then write it to a text file.
-//Postcondition: There will be a text file populated with the input strings.
-
-
-
-
-
-
-
-
+string test1 = "1";
+string test2 = "2";
+string test3 = "3";
 
 
 int main()
 {
 	TagsClass TagsClass;
+	DirectoryClass DirectoryClass;
+	FilesClass FilesClass;
 
-
-	string tempChoice;
-	const int MAX_TAGS = 11;
-	const int MIN_TAGS = 1;
-	string sortingArray[100];
 	sortingArray[0] = "There are no tags stored";
-	int nextTag = 3;
-	int arrayCounter1 = 1;
-	int tagInputNumber = 2;
-	int tagTotalNumber = 0;
 
-	string test1 = "1";
-	string test2 = "2";
-	string test3 = "3";
 
 	int choice = -1;
 	do
@@ -120,8 +104,8 @@ int main()
 		{
 			case 1:
 			{
-				int tagTotalNumber = findTagNumber(sortingArray); //read file counter
-				listPrint (sortingArray, tagTotalNumber);
+				int tagTotalNumber = TagsClass.findTagNumber(sortingArray); //read file counter
+				TagsClass.listPrint (sortingArray, tagTotalNumber);
 				choice = -1;
 				break;
 			}
@@ -129,7 +113,7 @@ int main()
 
 			case 2:
 			{
-				case2(sortingArray, MAX_TAGS, MIN_TAGS, tagInputNumber);
+				TagsClass.case2(sortingArray, MAX_TAGS, MIN_TAGS, tagInputNumber);
 				choice = -1;
 				break;
 			}
@@ -170,36 +154,3 @@ int main()
 
 
 }
-
-bool invalidEval(string a)
-{
-	bool b = true;
-	string invalidInputs[] = { "/" , "\\", "*", ":", "?", "<", ">", "|", "\"", " "};
-	int invalidInputsLength = (sizeof(invalidInputs)) / (sizeof(invalidInputs[0]));
-	for (int i = 0; i < invalidInputsLength; i++)
-	{
-		if (a.find(invalidInputs[i]) != string::npos)
-		{
-			b = false;
-			break;
-		}
-	}
-
-	return (b);
-}
-
-
-
-
-void fileOutput(string inputTag) 
-{
-	ofstream tagsFile;
-	tagsFile.open("tagsText.txt", ios::app); //Append to the text file
-	tagsFile << endl;
-	tagsFile << inputTag;
-	tagsFile.close();
-}
-
-
-
-

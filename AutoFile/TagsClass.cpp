@@ -1,5 +1,5 @@
 #include "stdafx.h"
-
+#include "TagsClass.h"
 
 TagsClass::TagsClass()
 {
@@ -88,7 +88,7 @@ void TagsClass::case2(string sortingArray[], const int MAX_TAGS, const int MIN_T
 
 		while (b == false)
 		{
-			cout << "The characters / \ * : ? < > | \"  and spaces are not valid inputs" << endl;
+			cout << "The characters / * : ? < > | \"  and spaces are not valid inputs" << endl;
 			cout << "Please input a new tag: ";
 			getline(cin, tempTag);
 			b = invalidEval(tempTag);
@@ -106,3 +106,32 @@ void TagsClass::case2(string sortingArray[], const int MAX_TAGS, const int MIN_T
 		fileOutput(tempTag);
 	}
 }
+
+bool TagsClass::invalidEval(string a)
+{
+	bool b = true;
+	string invalidInputs[] = { "/" , "\\", "*", ":", "?", "<", ">", "|", "\"", " " };
+	int invalidInputsLength = (sizeof(invalidInputs)) / (sizeof(invalidInputs[0]));
+	for (int i = 0; i < invalidInputsLength; i++)
+	{
+		if (a.find(invalidInputs[i]) != string::npos)
+		{
+			b = false;
+			break;
+		}
+	}
+
+	return (b);
+}
+
+void TagsClass::fileOutput(string inputTag)
+{
+	ofstream tagsFile;
+	tagsFile.open("tagsText.txt", ios::app); //Append to the text file
+	tagsFile << endl;
+	tagsFile << inputTag;
+	tagsFile.close();
+}
+
+
+

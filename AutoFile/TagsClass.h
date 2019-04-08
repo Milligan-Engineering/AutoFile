@@ -5,6 +5,9 @@ public:
 	TagsClass();
 	~TagsClass();
 
+
+
+
 	int findTagNumber(string arrayUpdate[]);
 	//Precondition: When this is called, it will read the text file "tagsText.txt".
 	//Postcondition: This function will output an integer value equivalent to the number of tags stored in the text file.
@@ -24,6 +27,14 @@ public:
 	//Postcondition: Each of the stored tags will be written, line by line, to a text file tagsText.txt
 		//for storage and manipulation. The array will be populated with the tags from this text
 		//file upon running the program again.
+
+	bool invalidEval(string a);
+	//Precondition: User inputs a string - tempTag
+	//Postcondition: Function outputs a boolean value determinining whether or not an invalid character is in the input string
+
+	void fileOutput(string inputTag);
+	//Precondition: A string, inputTag, will be put into this function which will then write it to a text file.
+	//Postcondition: There will be a text file populated with the input strings.
 
 
 
