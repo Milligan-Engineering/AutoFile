@@ -10,6 +10,8 @@ TagsClass::~TagsClass()
 }
 
 
+
+
 void TagsClass::listPrint(string sortingArray1[], int tagTotalNumber)
 {
 	for (int arrayCounter1 = 0; arrayCounter1 <= tagTotalNumber; arrayCounter1++)
@@ -135,3 +137,64 @@ void TagsClass::fileOutput(string inputTag)
 
 
 
+//----------------------
+
+string getTempChoice()
+{
+
+}
+
+string getSortingArray()
+{
+
+}
+
+
+int getArrayCounter1()
+{
+
+}
+
+
+int getTagInputNumber()
+{
+
+}
+
+
+int getTagTotalNumber()
+{
+
+}
+
+
+//----------------------
+
+void setTempChoice(string tempChoice)
+{
+
+}
+
+
+void setSortingArray(string sortingArray)
+{
+
+}
+
+
+void setArrayCounter1(int arrayCounter1)
+{
+
+}
+
+
+void setTagInputNumber(int tagInputNumber)
+{
+
+}
+
+
+void setTagTotalNumber(int tagTotalNumber)
+{
+
+}

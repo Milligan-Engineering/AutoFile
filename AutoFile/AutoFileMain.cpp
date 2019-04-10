@@ -3,7 +3,7 @@
 //Email Addresss: tnthacker@my.milligan.edu
 //Assignment Number: Term Project
 //Description: Eventually, this program will take an input "tag" and find files corresponding to said tag, and then automatically file those for the user.
-//Last Changed: April 1, 2019
+//Last Changed: April 9, 2019
 
 /*
 Preface to Autofile:
@@ -20,15 +20,7 @@ I intend to, near the end of the semester, change this so that the array size is
 #include "DirectoryClass.h"
 #include "FilesClass.h"
 
-string tempChoice;
-string sortingArray[100];
-int arrayCounter1 = 1;
-int tagInputNumber = 2;
-int tagTotalNumber = 0;
 
-string test1 = "1";
-string test2 = "2";
-string test3 = "3";
 
 
 int main()

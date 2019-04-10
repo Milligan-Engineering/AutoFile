@@ -36,11 +36,33 @@ public:
 	//Precondition: A string, inputTag, will be put into this function which will then write it to a text file.
 	//Postcondition: There will be a text file populated with the input strings.
 
+	string getTempChoice();
+	string getSortingArray();
+	int getArrayCounter1();
+	int getTagInputNumber();
+	int getTagTotalNumber();
+
+	void setTempChoice(string tempChoice);
+	void setSortingArray(string sortingArray);
+	void setArrayCounter1(int arrayCounter1);
+	void setTagInputNumber(int tagInputNumber);
+	void setTagTotalNumber(int tagTotalNumber);
 
 
 
 private:
 
+	string tempChoice;
+	string sortingArray[100];
+	int arrayCounter1 = 1;
+	int tagInputNumber = 2;
+	int tagTotalNumber = 0;
+
+
+	/*string test1 = "1";
+	string test2 = "2";
+	string test3 = "3";
+	*/
 
 };
 
