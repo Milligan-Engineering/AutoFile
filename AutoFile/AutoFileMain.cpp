@@ -46,7 +46,9 @@ int main()
 				<< "Enter 5 to close the program. \n \n"
 				<< "Submit your choice and press Return: ";
 
-			getline(cin, tempChoice);
+			string temp;
+			getline(cin, temp);
+			TagsClass.setTempChoice(temp);
 		
 			
 
@@ -59,7 +61,7 @@ int main()
 			*/
 			try
 			{
-				choice = stoi(tempChoice);
+				choice = stoi(TagsClass.getTempChoice());
 				if (choice != 1 && choice != 2 && choice != 3 && choice != 4 && choice != 5)
 				{
 					cout << "Please enter 1, 2, 3, 4, or 5." << endl << endl;
@@ -106,7 +108,7 @@ int main()
 
 			case 2:
 			{
-				TagsClass.case2(sortingArray, MAX_TAGS, MIN_TAGS, tagInputNumber);
+				TagsClass.case2(sortingArray, MAX_TAGS, MIN_TAGS, TagsClass.getTagInputNumber());
 				choice = -1;
 				break;
 			}
