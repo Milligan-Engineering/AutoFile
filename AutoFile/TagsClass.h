@@ -6,7 +6,7 @@ public:
 	~TagsClass();
 
 
-
+	
 
 	int findTagNumber(string arrayUpdate[]);
 	//Precondition: When this is called, it will read the text file "tagsText.txt".
@@ -36,24 +36,25 @@ public:
 	//Precondition: A string, inputTag, will be put into this function which will then write it to a text file.
 	//Postcondition: There will be a text file populated with the input strings.
 
+
+	//Accessor Functions
 	string getTempChoice();
-	string getSortingArray();
 	int getArrayCounter1();
 	int getTagInputNumber();
 	int getTagTotalNumber();
 
-	void setTempChoice(string tempChoice);
-	void setSortingArray(string sortingArray);
-	void setArrayCounter1(int arrayCounter1);
-	void setTagInputNumber(int tagInputNumber);
-	void setTagTotalNumber(int tagTotalNumber);
+
+	//Mutator Functions
+	void setTempChoice(string string);
+	void setArrayCounter1(int a);
+	void setTagInputNumber(int a);
+	void setTagTotalNumber(int a);
 
 
 
 private:
 
 	string tempChoice;
-	string sortingArray[100];
 	int arrayCounter1 = 1;
 	int tagInputNumber = 2;
 	int tagTotalNumber = 0;

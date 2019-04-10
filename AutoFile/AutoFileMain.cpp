@@ -28,6 +28,7 @@ int main()
 	TagsClass TagsClass;
 	DirectoryClass DirectoryClass;
 	FilesClass FilesClass;
+	string sortingArray[100];
 
 	sortingArray[0] = "There are no tags stored";
 

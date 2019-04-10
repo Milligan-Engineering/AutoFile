@@ -137,64 +137,47 @@ void TagsClass::fileOutput(string inputTag)
 
 
 
-//----------------------
+//Accessor Functions
 
-string getTempChoice()
+string TagsClass::getTempChoice()
 {
-
+	return(tempChoice);
 }
 
-string getSortingArray()
+int TagsClass::getArrayCounter1()
 {
-
+	return(arrayCounter1);
 }
 
-
-int getArrayCounter1()
+int TagsClass::getTagInputNumber()
 {
-
+	return(tagInputNumber);
 }
 
-
-int getTagInputNumber()
+int TagsClass::getTagTotalNumber()
 {
-
-}
-
-
-int getTagTotalNumber()
-{
-
+	return(tagTotalNumber);
 }
 
 
-//----------------------
+//Mutator Functions
 
-void setTempChoice(string tempChoice)
+void TagsClass::setTempChoice(string string)
 {
-
+	tempChoice = string;
 }
 
-
-void setSortingArray(string sortingArray)
+void TagsClass::setArrayCounter1(int a)
 {
-
+	arrayCounter1 = a;
 }
 
-
-void setArrayCounter1(int arrayCounter1)
+void TagsClass::setTagInputNumber(int a)
 {
-
+	tagInputNumber = a;
 }
 
-
-void setTagInputNumber(int tagInputNumber)
+void TagsClass::setTagTotalNumber(int a)
 {
-
-}
-
-
-void setTagTotalNumber(int tagTotalNumber)
-{
-
+	tagTotalNumber = a;
 }
