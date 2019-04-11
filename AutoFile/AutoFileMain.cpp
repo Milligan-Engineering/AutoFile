@@ -25,6 +25,9 @@ I intend to, near the end of the semester, change this so that the array size is
 
 int main()
 {
+	//TestStub
+
+	//TestStub -------
 	TagsClass TagsClass;
 	DirectoryClass DirectoryClass;
 	FilesClass FilesClass;
