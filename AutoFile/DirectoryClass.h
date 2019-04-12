@@ -12,10 +12,7 @@ public:
 
 	DirectoryClass(string, string);
 	
-
-
 private:
-
 
 
 };
