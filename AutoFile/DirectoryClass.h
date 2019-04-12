@@ -2,15 +2,16 @@
 class DirectoryClass
 {
 protected:
-	string DirName;
-	string DirPath;
+	string dirName;
+	string dirPath;
+	int subDirNum;
 
 
 public:
 	DirectoryClass();
 	~DirectoryClass();
 
-	DirectoryClass(string, string);
+	DirectoryClass(string, string, int);
 	
 private:
 

@@ -14,8 +14,9 @@ DirectoryClass::~DirectoryClass()
 }
 
 
-DirectoryClass::DirectoryClass(string tempName, string tempPath)
+DirectoryClass::DirectoryClass(string tempName, string tempPath, int tempSubDirNum)
 {
-	DirName = tempName;
-	DirPath = tempPath;
+	dirName = tempName;
+	dirPath = tempPath;
+	subDirNum = tempSubDirNum;
 }
