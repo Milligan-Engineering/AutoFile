@@ -37,14 +37,14 @@ public:
 	//Postcondition: There will be a text file populated with the input strings.
 
 
-	//Accessor Functions
+	//Accessor Functions ----------
 	string getTempChoice();
 	int getArrayCounter1();
 	int getTagInputNumber();
 	int getTagTotalNumber();
 
 
-	//Mutator Functions
+	//Mutator Functions ------------
 	void setTempChoice(string string);
 	void setArrayCounter1(int a);
 	void setTagInputNumber(int a);

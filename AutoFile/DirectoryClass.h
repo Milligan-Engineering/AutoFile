@@ -3,16 +3,23 @@
 class DirectoryClass
 {
 protected:
-	string dirName;
-	string dirPath;
-	int subDirNum;
 
+
+	struct dirInfo
+	{
+		string dirName;
+		string dirPath;
+		int subDirNum;
+	};
+	dirInfo myDir;
 
 public:
 	DirectoryClass();
 	~DirectoryClass();
 
 	DirectoryClass(string, string, int);
+
+	
 	
 private:
 

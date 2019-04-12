@@ -137,7 +137,7 @@ void TagsClass::fileOutput(string inputTag)
 
 
 
-//Accessor Functions
+//Accessor Functions ------------
 
 string TagsClass::getTempChoice()
 {
@@ -160,7 +160,7 @@ int TagsClass::getTagTotalNumber()
 }
 
 
-//Mutator Functions
+//Mutator Functions ---------------
 
 void TagsClass::setTempChoice(string string)
 {
