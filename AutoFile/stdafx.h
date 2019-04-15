@@ -3,9 +3,8 @@
 #include <string>
 #include <fstream>
 #include <limits>
-#include "TagsClass.h"
-#include "DirectoryClass.h"
-#include "FilesClass.h"
 
 using namespace std;
 
+const int MAX_TAGS = 11;
+const int MIN_TAGS = 1;

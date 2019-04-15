@@ -84,6 +84,7 @@
     <ClCompile Include="AutoFileMain.cpp" />
     <ClCompile Include="DirectoryClass.cpp" />
     <ClCompile Include="FilesClass.cpp" />
+    <ClCompile Include="SubDirectoryClass.cpp" />
     <ClCompile Include="TagsClass.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -93,6 +94,7 @@
     <ClInclude Include="DirectoryClass.h" />
     <ClInclude Include="FilesClass.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="SubDirectoryClass.h" />
     <ClInclude Include="TagsClass.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
