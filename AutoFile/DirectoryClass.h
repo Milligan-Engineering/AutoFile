@@ -19,7 +19,9 @@ public:
 
 	DirectoryClass(string, string, int);
 
-	
+	wstring DisplayPathInfo();
+
+	void pathPrinter();
 	
 private:
 
