@@ -19,6 +19,8 @@ public:
 
 	DirectoryClass(string, string, int);
 
+	//File System Navigation
+
 	wstring DisplayPathInfo();
 
 	void pathPrinter();

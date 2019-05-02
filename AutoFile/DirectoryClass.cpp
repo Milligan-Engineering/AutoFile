@@ -26,11 +26,19 @@ DirectoryClass::DirectoryClass(string tempName, string tempPath, int tempSubDirN
 wstring DirectoryClass::DisplayPathInfo()
 {
 	//STUB
-	wstring examplePath;
-	examplePath = L"C:/FileSystemTest/SubDir1/SubDirLevel2/File1.txt ";
+	wstring examplePath1 = L"C:/FileSystemTest/SubDir1/SubDirLevel2/File1.txt ";
+	wstring examplePath2 = L"C:/Users\tntth\OneDrive\Documents\EENG-201-HW-01-Timothy-Thacker.pdf ";
+	wstring examplePath3;
+	wstring examplePath4;
+	wstring examplePath5;
+	wstring examplePath6;
+	wstring examplePath7;
+	wstring examplePath8;
+	wstring examplePath9;
+	wstring examplePath10;
 
 
-	path pathToDisplay(examplePath);
+	path pathToDisplay(examplePath1);
 
 	wostringstream wos;
 	int i = 0;
