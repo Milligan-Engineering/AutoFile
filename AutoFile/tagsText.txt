@@ -1,8 +1,5 @@
 
-Tim
-John
-Mackenzie
-Henry
-DrG
-EENG
-math
+EENG221
+EENG202
+MATH
+PHOTO

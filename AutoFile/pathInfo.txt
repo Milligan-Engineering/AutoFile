@@ -1,14 +1,1 @@
-Displaying path info for: C:\FileSystemTest\SubDir1\SubDirLevel2\File1.txt 
-path part: 0 = C:
-path part: 1 = \
-path part: 2 = FileSystemTest
-path part: 3 = SubDir1
-path part: 4 = SubDirLevel2
-path part: 5 = File1.txt 
-root_name() = C:
-root_path() = C:\
-relative_path() = FileSystemTest\SubDir1\SubDirLevel2\File1.txt 
-parent_path() = C:\FileSystemTest\SubDir1\SubDirLevel2
-filename() = File1.txt 
-stem() = File1
-extension() = .txt 
+random-random-Timothy-Thacker

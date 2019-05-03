@@ -3,7 +3,7 @@
 //Email Addresss: tnthacker@my.milligan.edu
 //Assignment Number: Term Project
 //Description: Eventually, this program will take an input "tag" and find files corresponding to said tag, and then automatically file those for the user.
-//Last Changed: April 17, 2019
+//Last Changed: May 3, 2019
 
 /*
 Preface to Autofile:
@@ -30,7 +30,7 @@ int main()
 	DirectoryClass DirectoryClass;
 	FilesClass FilesClass;
 
-	string sortingArray[100];
+	string sortingArray[MAX_TAGS];
 	sortingArray[0] = "There are no tags stored";
 
 
@@ -125,8 +125,8 @@ int main()
 
 			case 4:
 			{
-				DirectoryClass.pathPrinter();
 				DirectoryClass.pathCollection();
+				DirectoryClass.wstringtostring();
 				choice = -1;
 				break;
 			}

@@ -5,7 +5,7 @@ public:
 	FilesClass();
 	~FilesClass();
 
-	void fileCompare();
+	void fileCompare(string sortingArray[], string dirStubs[]);
 	void autoFile();
 
 private:

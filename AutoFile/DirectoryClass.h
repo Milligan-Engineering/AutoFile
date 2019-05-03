@@ -7,29 +7,32 @@ protected:
 
 	struct dirInfo
 	{
-		string dirName;
-		string dirPath;
-		int subDirNum;
+		wstring rootName;
+		wstring rootPath;
+		wstring relativePath;
+		wstring parentPath;
+		wstring fileName;
+		wstring stem;
+		wstring extension;
 	};
-	dirInfo myDir;
+	dirInfo dirInfo[10];
 
 public:
 	DirectoryClass();
 	~DirectoryClass();
 
-	DirectoryClass(string, string, int);
 
 	//File System Navigation
 
 	wstring DisplayPathInfo();
 	void pathPrinter();
-
 	void pathCollection();
+	void wstringtostring();
 
 	//Accessor Functions
 	int getDirNumber();
 	wstring getDirArray();
-	wstring getDirStubs();
+	string getDirStubs();
 
 	//Mutator Functions
 	void setDirArray(int index, wstring content);
@@ -43,7 +46,7 @@ private:
 
 	int dirNumber = 10;
 	wstring dirArray[10];
-	wstring dirStubs[10];
+	string dirStubs[10];
 
 
 	//STUB end
