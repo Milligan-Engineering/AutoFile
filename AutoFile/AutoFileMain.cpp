@@ -126,6 +126,7 @@ int main()
 			case 4:
 			{
 				DirectoryClass.pathPrinter();
+				DirectoryClass.pathCollection();
 				choice = -1;
 				break;
 			}

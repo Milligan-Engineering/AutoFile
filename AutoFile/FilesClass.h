@@ -5,6 +5,8 @@ public:
 	FilesClass();
 	~FilesClass();
 
+	void fileCompare();
+	void autoFile();
 
 private:
 

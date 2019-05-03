@@ -1,6 +1,4 @@
-
 #include "DirectoryClass.h"
-
 
 
 DirectoryClass::DirectoryClass()
@@ -19,26 +17,30 @@ DirectoryClass::DirectoryClass(string tempName, string tempPath, int tempSubDirN
 	myDir.dirName = tempName;
 	myDir.dirPath = tempPath;
 	myDir.subDirNum = tempSubDirNum;
+
+	dirArray[0] = { L"C:/Users/tntth/OneDrive/Documents/EENG-ProjectNotes-Timothy-Thacker.txt " };
+	dirArray[1] = { L"C:/Users/tntth/OneDrive/Documents/EENG201-HW-01-Timothy-Thacker.pdf " };
+	dirArray[2] = { L"C:/Users/tntth/OneDrive/Documents/EENG201-HW-02-Timothy-Thacker.pdf " };
+	dirArray[3] = { L"C:/Users/tntth/OneDrive/Documents/EENG221-PR-01-Timothy-Thacker.pdf " };
+	dirArray[4] = { L"C:/Users/tntth/OneDrive/Documents/EENG221-PR-02-Timothy-Thacker.pdf " };
+	dirArray[5] = { L"C:/Users/tntth/OneDrive/Documents/MATH-ACT1-Timothy-Thacker.pdf " };
+	dirArray[6] = { L"C:/Users/tntth/OneDrive/Documents/MATH-ACT2-Timothy-Thacker.pdf " };
+	dirArray[7] = { L"C:/Users/tntth/OneDrive/Documents/PHOTO-abstract1-Timothy-Thacker.jpg " };
+	dirArray[8] = { L"C:/Users/tntth/OneDrive/Documents/PHOTO-abstract2-Timothy-Thacker.jpg " };
+	dirArray[9] = { L"C:/Users/tntth/OneDrive/Documents/random-random-Timothy-Thacker.jpg " };
 }
+
+
 
 
 
 wstring DirectoryClass::DisplayPathInfo()
 {
-	//STUB
-	wstring examplePath1 = L"C:/FileSystemTest/SubDir1/SubDirLevel2/File1.txt ";
-	wstring examplePath2 = L"C:/Users\tntth\OneDrive\Documents\EENG-201-HW-01-Timothy-Thacker.pdf ";
-	wstring examplePath3;
-	wstring examplePath4;
-	wstring examplePath5;
-	wstring examplePath6;
-	wstring examplePath7;
-	wstring examplePath8;
-	wstring examplePath9;
-	wstring examplePath10;
+
+	wstring examplePath0 = L"C:/FileSystemTest/SubDir1/SubDirLevel2/File1.txt ";
 
 
-	path pathToDisplay(examplePath1);
+	path pathToDisplay(examplePath0);
 
 	wostringstream wos;
 	int i = 0;
@@ -65,4 +67,47 @@ void DirectoryClass::pathPrinter()
 	writeFile.open("pathInfo.txt");
 	writeFile << DisplayPathInfo();
 	writeFile.close();
+}
+
+void DirectoryClass::pathCollection()
+{
+	//Take array populated with pulled paths, in this case from stubs
+	for (int i = 0; i < dirNumber; i++)
+	{
+	    path pathToDisplay(dirArray[i]);
+		wstring tempStub;
+		wcout << pathToDisplay;
+		tempStub = pathToDisplay.stem();
+		wcout << tempStub;
+		dirStubs[i] = tempStub;
+
+	}
+
+	//Populate dirStubs array with the "stems" to sort
+
+}
+
+
+
+
+
+
+//Accessor Functions
+int DirectoryClass::getDirNumber()
+{
+	return dirNumber;
+}
+wstring DirectoryClass::getDirArray()
+{
+	return dirArray[11];
+}
+wstring DirectoryClass::getDirStubs()
+{
+	return dirStubs[11];
+}
+
+//Mutator Functions
+void DirectoryClass::setDirArray(int index, wstring content)
+{
+	dirArray[index] = content;
 }
