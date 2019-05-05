@@ -62,10 +62,5 @@ private:
 	int tagTotalNumber = 0;
 
 
-	/*string test1 = "1";
-	string test2 = "2";
-	string test3 = "3";
-	*/
-
 };
 

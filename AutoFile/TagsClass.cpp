@@ -62,15 +62,6 @@ void TagsClass::case2(string sortingArray[], const int MAX_TAGS, const int MIN_T
 		tagInputNumber = -1;
 	}
 
-	/*if (tagInputNumber != 1 | tagInputNumber != 2 | tagInputNumber != 3 | tagInputNumber != 4 | tagInputNumber != 5 |
-		tagInputNumber != 6 | tagInputNumber != 7 | tagInputNumber != 8 | tagInputNumber != 9 | tagInputNumber != 10)
-	{
-		cout << "Number of tags must be an integer from " << MIN_TAGS << " to " << MAX_TAGS - 1 << ".\n";
-		cout << "Please enter a new number: ";
-		getline(cin, tempTagInputNumber);
-		tagInputNumber = stoi(tempTagInputNumber);
-	}
-	*/
 
 	while (tagInputNumber > MAX_TAGS - 1 || tagInputNumber < MIN_TAGS)
 	{
@@ -129,7 +120,7 @@ bool TagsClass::invalidEval(string a)
 void TagsClass::fileOutput(string inputTag)
 {
 	ofstream tagsFile;
-	tagsFile.open("tagsText.txt", ios::app); //Append to the text file
+	tagsFile.open("tagsText.txt", ios::app); 
 	tagsFile << endl;
 	tagsFile << inputTag;
 	tagsFile.close();

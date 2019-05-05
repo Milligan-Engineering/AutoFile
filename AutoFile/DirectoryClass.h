@@ -22,26 +22,28 @@ public:
 	~DirectoryClass();
 
 
-	//File System Navigation
-
-	wstring DisplayPathInfo();
-	void pathPrinter();
 	void pathCollection();
-	void wstringtostring();
+	//Precondition: There must be at least one directory in dirArray[].
+	//Postcondition: The array of objects, dirInfo, will be populated will all information pieces of the provided directories.
 
-	//Accessor Functions
+
+	void wstringtostring();
+	//Precondition: pathCollection() must run for at least one directory
+	//Postcondition: An array, dirStubs[], will be populated with the "stem" part of each directory, in string rather than wstring type.
+
+
+	//Accessor Functions ----------
 	int getDirNumber();
 	wstring getDirArray();
 	string * getDirStubs();
 
-	//Mutator Functions
+	//Mutator Functions ------------
 	void setDirArray(int index, wstring content);
 
 
 private:
 
-	//STUB -- take these as files that would use a tag-based naming convention all stored under OneDrive\Documents, unassorted.
-//examplePath1 serves as an example for decomposing a path into its perspective parts
+//STUB -- take these as files that would use a tag-based naming convention all stored under OneDrive\Documents, unassorted.
 //examplePath10 serves as a path that would not be sorted
 
 	int dirNumber = 10;
@@ -49,7 +51,6 @@ private:
 	string dirStubs[10];
 
 
-	//STUB end
 
 };
 

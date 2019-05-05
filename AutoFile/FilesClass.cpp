@@ -45,7 +45,7 @@ void FilesClass::fileCompare(string sortingArray[], string dirStubs[])
 void FilesClass::autoFile(string dirStubs[], int dirNumber)
 {
 	ofstream filesClass;
-	filesClass.open("pathInfo.txt", ios::app); //Append to the text file
+	filesClass.open("pathInfo.txt");
 	filesClass << endl;
 	for (int i=0; i < dirNumber; i++)
 	{
@@ -53,4 +53,10 @@ void FilesClass::autoFile(string dirStubs[], int dirNumber)
 		filesClass << "\n";
 	}
 	filesClass.close();
+}
+
+//Accessor Functions ----------
+char FilesClass::getSlash()
+{
+	return(slash);
 }

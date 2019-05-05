@@ -2,16 +2,11 @@
 //Author: Timothy Thacker
 //Email Addresss: tnthacker@my.milligan.edu
 //Assignment Number: Term Project
-//Description: Eventually, this program will take an input "tag" and find files corresponding to said tag, and then automatically file those for the user.
-//Last Changed: May 3, 2019
+//Description: AutoFile is designed to automatically sort through files saved into the "Documents" folder of a computer - the sorting 
+//             done on a TAGS based system.
+//Last Changed: May 4, 2019
 
-/*
-Preface to Autofile:
-It its current state, Autofile is limited to MAX_TAGS number of tags - Indexing the sorting array to 0-10. 
-I have changed the array size to be 100, rather than MAX_TAGS until we implement dynamic arrays.
-I intend to, near the end of the semester, change this so that the array size is determined by the number of lines in the text file
-	or something of the sort. Considering this, understand that MAX_TAGS is simply a stub.
-*/
+
 
 
 
@@ -53,13 +48,6 @@ int main()
 		
 			
 
-			/*if (cin.fail())
-			{
-				cin.clear();
-				cin.ignore(numeric_limits<streamsize>::max(), '\n');
-				cout << "You must enter 1, 2, or 3" << endl << endl;
-			}
-			*/
 			try
 			{
 				choice = stoi(TagsClass.getTempChoice());
@@ -76,23 +64,6 @@ int main()
 			}
 			
 
-			//This was a different mnethod I was testing for input validation, but the try/catch method works as is.
-			/*while (tempChoice != test1 | tempChoice != test2 | tempChoice != test3)
-			{
-				cout << "You must enter either 1, 2, or 3." << endl;
-				getline(cin, tempChoice);
-			}
-			
-			choice = stoi(tempChoice);
-			*/
-
-			/*if (choice != 1 | choice != 2 | choice != 3)
-			{
-				cout << "You must enter either 1, 2, or 3." << endl;
-				getline(cin, tempChoice);
-				choice = stoi(tempChoice);
-			}
-			*/
 		}
 
 
