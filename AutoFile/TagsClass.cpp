@@ -1,5 +1,5 @@
-#include "stdafx.h"
 #include "TagsClass.h"
+
 
 TagsClass::TagsClass()
 {

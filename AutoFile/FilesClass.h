@@ -1,4 +1,8 @@
 #pragma once
+#include "stdafx.h"
+#include "TagsClass.h"
+#include "DirectoryClass.h"
+
 class FilesClass
 {
 public:
@@ -6,11 +10,11 @@ public:
 	~FilesClass();
 
 	void fileCompare(string sortingArray[], string dirStubs[]);
-	void autoFile();
+	void autoFile(string dirStubs[], int dirNumber);
 
 private:
 
-
+	char slash = '\\';
 
 };
 

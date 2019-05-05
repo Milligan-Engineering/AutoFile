@@ -16,9 +16,9 @@ I intend to, near the end of the semester, change this so that the array size is
 
 
 #include "stdafx.h"
+#include "FilesClass.h"
 #include "TagsClass.h"
 #include "DirectoryClass.h"
-#include "FilesClass.h"
 
 
 
@@ -127,6 +127,9 @@ int main()
 			{
 				DirectoryClass.pathCollection();
 				DirectoryClass.wstringtostring();
+				
+				FilesClass.fileCompare(sortingArray, DirectoryClass.getDirStubs());
+				FilesClass.autoFile(DirectoryClass.getDirStubs(), DirectoryClass.getDirNumber());
 				choice = -1;
 				break;
 			}

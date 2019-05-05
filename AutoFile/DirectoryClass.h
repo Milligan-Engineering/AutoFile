@@ -32,7 +32,7 @@ public:
 	//Accessor Functions
 	int getDirNumber();
 	wstring getDirArray();
-	string getDirStubs();
+	string * getDirStubs();
 
 	//Mutator Functions
 	void setDirArray(int index, wstring content);

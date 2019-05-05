@@ -66,7 +66,7 @@ void DirectoryClass::pathPrinter()
 void DirectoryClass::pathCollection()
 {
 
-	for (int i = 0; i <= dirNumber; i++)
+	for (int i = 0; i < dirNumber; i++)
 	{
 		path pathToDisplay(dirArray[i]);
 		dirInfo[i].rootName = pathToDisplay.root_name();
@@ -82,7 +82,7 @@ void DirectoryClass::pathCollection()
 
 void DirectoryClass::wstringtostring()
 {
-	for (int i = 0; i <= dirNumber; i++)
+	for (int i = 0; i < dirNumber; i++)
 	{
 		wstring wide(dirInfo[i].stem);
 		string str(wide.begin(), wide.end());
@@ -104,9 +104,11 @@ wstring DirectoryClass::getDirArray()
 {
 	return dirArray[11];
 }
-string DirectoryClass::getDirStubs()
+string * DirectoryClass::getDirStubs()
 {
-	return dirStubs[10];
+	string *foo;
+	foo = &dirStubs[10];
+	return foo;
 }
 
 //Mutator Functions

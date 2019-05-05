@@ -1,7 +1,5 @@
 #include "stdafx.h"
 #include "FilesClass.h"
-#include "TagsClass.h"
-#include "DirectoryClass.h"
 
 
 
@@ -22,29 +20,37 @@ void FilesClass::fileCompare(string sortingArray[], string dirStubs[])
 	DirectoryClass DirectoryClass;
 	int dirNumber = DirectoryClass.getDirNumber();
 	int b = 0;
-	for (int i = 0; i <= dirNumber; i++)
-	{
-		if (dirStubs[i].find(sortingArray[b]) != string::npos)
-		{
-			b++;
-			if (b = tagTotalNumber)
+	label: for (int i = 0; i < dirNumber; i++)
 			{
-				break;
-			}
-		}
+				if (dirStubs[i].find(sortingArray[b]) != string::npos)
+				{
+					b++;
+					if (b = tagTotalNumber)
+					{
+						i++;
+						goto label;
+					}
+				}
 
-		else
-		{
-			dirStubs[i] = sortingArray[b];
-				
-		}
-		b = 0;
-	}
+				else
+				{
+					dirStubs[i] = sortingArray[b].append(1, slash).append(dirStubs[i]);
+				}
+				b = 0;
+			}
 
 }
 
 
-void FilesClass::autoFile()
+void FilesClass::autoFile(string dirStubs[], int dirNumber)
 {
-	//file system navigation here to change path
+	ofstream filesClass;
+	filesClass.open("pathInfo.txt", ios::app); //Append to the text file
+	filesClass << endl;
+	for (int i=0; i < dirNumber; i++)
+	{
+		filesClass << dirStubs[i];
+		filesClass << "\n";
+	}
+	filesClass.close();
 }
