@@ -99,7 +99,7 @@ int main()
 				DirectoryClass.pathCollection();
 				DirectoryClass.wstringtostring();
 				
-				FilesClass.fileCompare(sortingArray, DirectoryClass.getDirStubs());
+				FilesClass.fileCompare(sortingArray, DirectoryClass.getDirStubs(), TagsClass.findTagNumber(sortingArray), DirectoryClass.getDirNumber());
 				FilesClass.autoFile(DirectoryClass.getDirStubs(), DirectoryClass.getDirNumber());
 				choice = -1;
 				break;

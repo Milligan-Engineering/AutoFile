@@ -65,15 +65,21 @@ wstring DirectoryClass::getDirArray()
 {
 	return dirArray[11];
 }
-string * DirectoryClass::getDirStubs()
+string* DirectoryClass::getDirStubs()
 {
-	string *foo;
-	foo = &dirStubs[10];
-	return foo;
+	return dirStubs;
 }
 
 //Mutator Functions
 void DirectoryClass::setDirArray(int index, wstring content)
 {
 	dirArray[index] = content;
+}
+void DirectoryClass::setDirNumber(int number)
+{
+	dirNumber = number;
+}
+void DirectoryClass::setdirStubs(int stubIndex, string stubs)
+{
+	dirStubs[stubIndex] = stubs;
 }

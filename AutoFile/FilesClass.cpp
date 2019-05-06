@@ -13,31 +13,18 @@ FilesClass::~FilesClass()
 }
 
 
-void FilesClass::fileCompare(string sortingArray[], string dirStubs[])
+void FilesClass::fileCompare(string sortingArray[], string dirStubs[], int tagTotalNumber, int dirNumber)
 {
-	TagsClass TagsClass;
-	int tagTotalNumber = TagsClass.findTagNumber(sortingArray);
-	DirectoryClass DirectoryClass;
-	int dirNumber = DirectoryClass.getDirNumber();
-	int b = 0;
-	label: for (int i = 0; i < dirNumber; i++)
+	for (int i = 0; i < dirNumber; i++)
+	{
+		for(int x = 0; x < tagTotalNumber; x++)
+		{
+			if (dirStubs[i].find(sortingArray[x]) != string::npos)
 			{
-				if (dirStubs[i].find(sortingArray[b]) != string::npos)
-				{
-					b++;
-					if (b = tagTotalNumber)
-					{
-						i++;
-						goto label;
-					}
-				}
-
-				else
-				{
-					dirStubs[i] = sortingArray[b].append(1, slash).append(dirStubs[i]);
-				}
-				b = 0;
+				dirStubs[i] = sortingArray[x].append(1, slash).append(dirStubs[i]);
 			}
+		}
+	}
 
 }
 
@@ -59,4 +46,10 @@ void FilesClass::autoFile(string dirStubs[], int dirNumber)
 char FilesClass::getSlash()
 {
 	return(slash);
+}
+
+//Mutator Functions ------------
+void FilesClass::setSlash(char a)
+{
+	slash = a;
 }
