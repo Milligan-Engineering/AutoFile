@@ -45,8 +45,6 @@ int main()
 			string temp;
 			getline(cin, temp);
 			TagsClass.setTempChoice(temp);
-		
-			
 
 			try
 			{
@@ -63,9 +61,7 @@ int main()
 				choice = -1;
 			}
 			
-
 		}
-
 
 		switch (choice)
 		{
@@ -111,18 +107,10 @@ int main()
 			}
 
 		} 
-
 		
 	} while (choice != 5);
 
-
-
-
-
-
 	return 0;
-
-
 }
 
 

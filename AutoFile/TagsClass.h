@@ -45,14 +45,11 @@ public:
 	int getTagInputNumber();
 	int getTagTotalNumber();
 
-
 	//Mutator Functions ------------
 	void setTempChoice(string string);
 	void setArrayCounter1(int a);
 	void setTagInputNumber(int a);
 	void setTagTotalNumber(int a);
-
-
 
 private:
 
@@ -60,7 +57,6 @@ private:
 	int arrayCounter1 = 1;
 	int tagInputNumber = 2;
 	int tagTotalNumber = 0;
-
 
 };
 

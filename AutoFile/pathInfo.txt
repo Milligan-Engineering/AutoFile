@@ -1,11 +1,6 @@
 
-\\EENG-ProjectNotes-Timothy-Thacker
-EENG201-HW-01-Timothy-Thacker
-EENG201-HW-02-Timothy-Thacker
+\EENG202\\EENG202-HW-01-Timothy-Thacker
 EENG221\EENG221-PR-01-Timothy-Thacker
-EENG221-PR-02-Timothy-Thacker
 MATH\MATH-ACT1-Timothy-Thacker
-MATH-ACT2-Timothy-Thacker
 PHOTO\PHOTO-abstract1-Timothy-Thacker
-PHOTO-abstract2-Timothy-Thacker
 random-random-Timothy-Thacker

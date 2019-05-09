@@ -4,16 +4,14 @@
 DirectoryClass::DirectoryClass()
 {
 
-	dirArray[0] = { L"C:/Users/tntth/OneDrive/Documents/EENG-ProjectNotes-Timothy-Thacker.txt " };
-	dirArray[1] = { L"C:/Users/tntth/OneDrive/Documents/EENG201-HW-01-Timothy-Thacker.pdf " };
-	dirArray[2] = { L"C:/Users/tntth/OneDrive/Documents/EENG201-HW-02-Timothy-Thacker.pdf " };
-	dirArray[3] = { L"C:/Users/tntth/OneDrive/Documents/EENG221-PR-01-Timothy-Thacker.pdf " };
-	dirArray[4] = { L"C:/Users/tntth/OneDrive/Documents/EENG221-PR-02-Timothy-Thacker.pdf " };
-	dirArray[5] = { L"C:/Users/tntth/OneDrive/Documents/MATH-ACT1-Timothy-Thacker.pdf " };
-	dirArray[6] = { L"C:/Users/tntth/OneDrive/Documents/MATH-ACT2-Timothy-Thacker.pdf " };
-	dirArray[7] = { L"C:/Users/tntth/OneDrive/Documents/PHOTO-abstract1-Timothy-Thacker.jpg " };
-	dirArray[8] = { L"C:/Users/tntth/OneDrive/Documents/PHOTO-abstract2-Timothy-Thacker.jpg " };
-	dirArray[9] = { L"C:/Users/tntth/OneDrive/Documents/random-random-Timothy-Thacker.jpg " };
+	//Stub Information
+	//DirArray[4] is an example of something that would not be sorted into a folder.
+	
+	dirArray[0] = { L"C:/Users/tntth/OneDrive/Documents/EENG202-HW-01-Timothy-Thacker.pdf " };
+	dirArray[1] = { L"C:/Users/tntth/OneDrive/Documents/EENG221-PR-01-Timothy-Thacker.pdf " };
+	dirArray[2] = { L"C:/Users/tntth/OneDrive/Documents/MATH-ACT1-Timothy-Thacker.pdf " };
+	dirArray[3] = { L"C:/Users/tntth/OneDrive/Documents/PHOTO-abstract1-Timothy-Thacker.jpg " };
+	dirArray[4] = { L"C:/Users/tntth/OneDrive/Documents/random-random-Timothy-Thacker.jpg " };
 }
 
 

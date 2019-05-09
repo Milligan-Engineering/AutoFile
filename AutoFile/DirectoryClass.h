@@ -15,7 +15,7 @@ protected:
 		wstring stem;
 		wstring extension;
 	};
-	dirInfo dirInfo[10];
+	dirInfo dirInfo[5];
 
 public:
 	DirectoryClass();
@@ -45,12 +45,9 @@ public:
 
 private:
 
-//STUB -- take these as files that would use a tag-based naming convention all stored under OneDrive\Documents, unassorted.
-//examplePath10 serves as a path that would not be sorted
-
-	int dirNumber = 10;
-	wstring dirArray[10];
-	string dirStubs[10];
+	int dirNumber = 5;
+	wstring dirArray[5];
+	string dirStubs[5];
 
 
 
