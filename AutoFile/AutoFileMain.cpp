@@ -4,7 +4,7 @@
 //Assignment Number: Term Project
 //Description: AutoFile is designed to automatically sort through files saved into the "Documents" folder of a computer - the sorting 
 //             done on a TAGS based system.
-//Last Changed: May 4, 2019
+//Last Changed: May 8, 2019
 
 
 
